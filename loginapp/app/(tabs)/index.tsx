@@ -7,6 +7,12 @@ import {
 } from 'react-native';
 import React, { useState, useEffect } from 'react';
 
+const theme = {
+    backgroundColor1: '#aaaaaa',
+    backgroundColor2: '#000000' + '22',
+    textColor1: '#222',
+}
+
 export default function App() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -97,25 +103,27 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#111',
+        backgroundColor: theme.backgroundColor1,
+        color: theme.textColor1,
     },
 
     input: {
         height: 'auto',
         width: '80%',
-        backgroundColor: '#55555522',
+        backgroundColor: theme.backgroundColor2,
+        color: theme.textColor1,
         borderWidth: 1,
         borderRadius: 15,
         borderColor: '#ffffff77',
         fontSize: 16,
-        color: '#aaa',
         padding: 20,
     },
 
     button: {
         height: 'auto',
         width: '65%',
-        backgroundColor: '#55555522',
+        backgroundColor: theme.backgroundColor2,
+        color: theme.textColor1,
         fontSize: 16,
         padding: 15,
         borderWidth: 1,
@@ -126,13 +134,14 @@ const styles = StyleSheet.create({
     },
 
     buttonText: {
-        color: '#aaa',
+        color: theme.textColor1,
     },
 
     switchButton: {
         height: 'auto',
         width: '65%',
-        backgroundColor: '#55555522',
+        backgroundColor: theme.backgroundColor2,
+        color: theme.textColor1,
         fontSize: 16,
         padding: 15,
         borderWidth: 1,
@@ -143,25 +152,25 @@ const styles = StyleSheet.create({
     },
 
     switchButtonText: {
-        color: '#aaa',
+        color: theme.textColor1,
     },
 
     header: {
         fontSize: 28,
         fontWeight: 'bold',
-        color: '#555',
+        color: theme.textColor1,
         marginBottom: '5%',
     },
 
     message: {
         fontSize: 16,
-        color: '#070',
+        color: theme.textColor1,
         textAlign: 'center',
     },
 
     error: {
         fontSize: 14,
-        color: '#a55',
+        color: theme.textColor1,
         textAlign: 'center',
     },
 });
